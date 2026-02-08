@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>绿皮书单词背诵</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>绿皮书单词背诵</h1>
+        </header>
+        
+        <div class="controls">
+            <div class="control-group">
+                <label for="unit-select">选择单元:</label>
+                <select id="unit-select">
+                    <option value="all">所有单元</option>
+                    <!-- Options will be populated by JS -->
+                </select>
+            </div>
+            
+            <div class="control-group">
+                <label for="repeat-toggle">
+                    <input type="checkbox" id="repeat-toggle"> 重复背诵模式
+                </label>
+            </div>
+
+            <div class="control-group">
+                 <button id="reset-btn">重置进度</button>
+            </div>
+        </div>
+
+        <div class="card-container" id="card-container">
+            <div class="card" id="word-card">
+                <div class="word-content">
+                    <h2 id="word-text">点击开始</h2>
+                    <p id="word-meaning" class="hidden"></p>
+                </div>
+                <div class="card-actions">
+                    <button id="show-answer-btn">显示释义</button>
+                    <button id="next-btn">下一个</button>
+                </div>
+            </div>
+            <div id="status-msg"></div>
+        </div>
+        
+        <div class="progress">
+            <span id="progress-text">0 / 0</span>
+        </div>
+    </div>
+
+    <script src="words.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
