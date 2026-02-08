@@ -16,11 +16,13 @@ git commit -m "%commit_msg%"
 
 echo.
 echo 3. Pushing to GitHub (origin)...
+echo (Note: This requires VPN/Proxy. If it fails, ignore it and check Gitee)
 git push origin master
 
 echo.
 echo 4. Pushing to Gitee (gitee)...
-git push gitee master
+echo (Attempting to bypass proxy for Gitee...)
+git -c http.proxy= -c https.proxy= push gitee master
 
 echo.
 echo ========================================
