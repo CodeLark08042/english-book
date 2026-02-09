@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const repeatToggle = document.getElementById('repeat-toggle');
     const resetBtn = document.getElementById('reset-btn');
     const wordText = document.getElementById('word-text');
+    const wordPhonetic = document.getElementById('word-phonetic');
     const wordMeaning = document.getElementById('word-meaning');
     const showAnswerBtn = document.getElementById('show-answer-btn');
     const nextBtn = document.getElementById('next-btn');
@@ -125,6 +126,13 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // Update UI
         wordText.textContent = currentWord.word;
+        if (currentWord.phonetic) {
+            wordPhonetic.textContent = currentWord.phonetic;
+            wordPhonetic.classList.remove('hidden');
+        } else {
+            wordPhonetic.textContent = '';
+            wordPhonetic.classList.add('hidden');
+        }
         wordMeaning.textContent = currentWord.meaning;
         wordMeaning.classList.add('hidden');
         

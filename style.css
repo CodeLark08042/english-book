@@ -98,52 +98,47 @@ button:disabled {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 300px;
+    height: 100%;
 }
 
-.word-content {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-#word-text {
+.word-content h2 {
     font-size: 2.5rem;
-    margin: 0 0 20px 0;
-    color: #2c3e50;
+    margin-bottom: 10px;
+    color: #333;
 }
 
-#word-meaning {
+.word-phonetic {
     font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+.word-content p {
+    font-size: 1.5rem;
     color: #555;
-    line-height: 1.5;
-    margin: 0;
-    min-height: 60px;
+    margin-top: 20px;
+    min-height: 3rem;
 }
 
 .hidden {
     visibility: hidden;
-    opacity: 0;
 }
 
-.card-actions {
+.progress-info {
+    text-align: center;
+    color: #888;
+    margin-top: 10px;
+}
+
+.nav-buttons {
     display: flex;
-    justify-content: center;
-    gap: 20px;
+    justify-content: space-between;
+    width: 100%;
     margin-top: 20px;
 }
 
-.progress {
-    text-align: center;
-    color: #666;
-    font-size: 0.9rem;
-}
-
-#status-msg {
-    margin-top: 10px;
-    color: #e67e22;
-    font-weight: bold;
-    height: 20px;
+.nav-btn {
+    flex: 1;
+    margin: 0 5px;
 }

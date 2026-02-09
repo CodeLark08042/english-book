@@ -13,18 +13,20 @@ def convert_excel_to_js(file_path, output_path):
         for index, row in df.iterrows():
             col0 = str(row[0]).strip() if pd.notna(row[0]) else ""
             col1 = str(row[1]).strip() if pd.notna(row[1]) else ""
-            col2 = str(row[2]).strip() if pd.notna(row[2]) else ""
+            col2 = str(row[2]).strip() if pd.notna(row[2]) else "" # Phonetic
+            col3 = str(row[3]).strip() if pd.notna(row[3]) else "" # Meaning
             
             if "list" in col0.lower():
                 current_unit = col0
                 continue
                 
-            if col1 and col2:
+            if col1 and col3: # Ensure word and meaning exist
                 words.append({
                     "id": len(words) + 1,
                     "unit": current_unit,
                     "word": col1,
-                    "meaning": col2
+                    "phonetic": col2,
+                    "meaning": col3
                 })
         
         # Write as a JS file with a global variable
@@ -40,6 +42,6 @@ def convert_excel_to_js(file_path, output_path):
         print(f"Error: {e}")
 
 if __name__ == "__main__":
-    file_path = r'd:\考研学习\英语\绿皮书单词\绿皮书1-50.xlsx'
+    file_path = r'd:\考研学习\英语\绿皮书单词\单词书\绿皮书1-50（音标版）_completed.xlsx'
     output_path = r'd:\考研学习\英语\绿皮书单词\words.js'
     convert_excel_to_js(file_path, output_path)
