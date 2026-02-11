@@ -42,6 +42,6 @@ def convert_excel_to_js(file_path, output_path):
         print(f"Error: {e}")
 
 if __name__ == "__main__":
-    file_path = r'd:\考研学习\英语\绿皮书单词\单词书\绿皮书1-50（音标版）_completed.xlsx'
+    file_path = r'd:\考研学习\英语\绿皮书单词\单词书\单词数据.xlsx'
     output_path = r'd:\考研学习\英语\绿皮书单词\words.js'
     convert_excel_to_js(file_path, output_path)

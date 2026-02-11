@@ -4,7 +4,7 @@ echo       Updating Word Flashcards (GitHub)
 echo ========================================
 
 echo.
-echo 1. Updating words from Excel...
+echo 1. Updating words from Excel (单词数据.xlsx)...
 python convert_to_json.py
 
 echo.
