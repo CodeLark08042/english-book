@@ -2956,7 +2956,7 @@ window.wordData = [
   {
     "id": 423,
     "unit": "List 6",
-    "word": "X-way",
+    "word": "X-ray",
     "phonetic": "[x-way*]",
     "meaning": "n.x射线,×光"
   },
@@ -3957,7 +3957,7 @@ window.wordData = [
   {
     "id": 566,
     "unit": "list 8",
-    "word": "distll",
+    "word": "distill",
     "phonetic": "[distll*]",
     "meaning": "vt.蒸馏;用蒸馏法提取;吸取,提炼"
   },
